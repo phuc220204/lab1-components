@@ -103,7 +103,7 @@ body,
 }
 
 .App {
-  padding: 2rem 1.5rem;   /* 2rem top/bottom, 1.5rem left/right */
+  padding: 0;
 }
 
 #root {
