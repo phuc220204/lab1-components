@@ -9,38 +9,17 @@
 
 /* Navbar Styles */
 .navbar-custom {
-  position: sticky;
-  top: 0;
+  background: #e6f4ea;
   width: 100%;
-  padding: 0 2rem;
-  background: linear-gradient(90deg, #ffd1e6 0%, #d4f7dc 100%);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  z-index: 999;
+  padding: 0.5rem 1rem;
 }
 .navbar-custom .navbar-brand {
-  color: #3a7d44 !important;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
+  color: #5a9e6f !important;
 }
 .navbar-custom .nav-link {
-  color: #3a7d44 !important;
-  margin: 0 1rem;
-  font-weight: 500;
-  position: relative;
-}
-.navbar-custom .nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #3a7d44;
-  transition: width .3s;
-}
-.navbar-custom .nav-link:hover::after,
-.navbar-custom .nav-link.active::after {
-  width: 100%;
+  color: #5a9e6f !important;
+  margin-left: 1rem;
 }
 .navbar-custom .navbar-toggler {
   border-color: var(--accent-green);
