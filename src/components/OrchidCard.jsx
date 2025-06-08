@@ -32,7 +32,16 @@ function OrchidCard({ orchid, onOrchidClick }) {
       style={{ width: "18rem", cursor: "pointer" }}
       onClick={handleClick}
     >
-      <Card.Img variant="top" src={image} />
+      <Card.Img
+        variant="top"
+        src={image}
+        style={{
+          objectFit: "cover",
+          width: "100%",
+          height: "200px",
+        }}
+        alt={name}
+      />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>

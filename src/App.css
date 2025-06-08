@@ -3,12 +3,12 @@
 
 /* CSS Variables */
 :root {
-  --primary-base: #2f5d50;    /* xanh lá rêu */
-  --primary-light: #a3d9c4;   /* xanh lá nhạt */
-  --accent-flower: #f28ab2;   /* hồng hoa đào */
-  --text-primary: #2c2c2c;    /* xám đậm */
-  --bg-page: #fcfcfa;         /* nền sáng tự nhiên */
-  --bg-card: #ffffff;         /* nền trắng cho card */
+  --primary-base: #2f5d50; /* xanh lá rêu */
+  --primary-light: #a3d9c4; /* xanh lá nhạt */
+  --accent-flower: #f28ab2; /* hồng hoa đào */
+  --text-primary: #2c2c2c; /* xám đậm */
+  --bg-page: #fcfcfa; /* nền sáng tự nhiên */
+  --bg-card: #ffffff; /* nền trắng cho card */
 }
 
 /* Navbar Styles */
@@ -18,7 +18,7 @@
   height: 80px;
   padding: 0 2rem;
   background: linear-gradient(90deg, #ffd1e6 0%, #d4f7dc 100%);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
 }
@@ -53,11 +53,11 @@
     min-height: 80px;
     padding: 1rem 2rem;
   }
-  
+
   .navbar-custom .navbar-collapse {
     margin-top: 1rem;
   }
-  
+
   .navbar-custom .nav-link {
     margin-left: 0;
     margin-top: 0.5rem;
@@ -99,7 +99,7 @@ body,
   padding: 0;
   background-color: var(--bg-page);
   color: var(--text-primary);
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .App {
@@ -164,13 +164,13 @@ body,
   background: var(--bg-card);
   border: 1px solid var(--primary-light);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
 }
 
 .orchid-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .orchid-card .card-title {
@@ -234,6 +234,20 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+/* Orchid card image styling */
+.orchid-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.orchid-card:hover img {
+  transform: scale(1.02);
 }
 
 .orchid-card:hover {
