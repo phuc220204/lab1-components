@@ -1,9 +1,25 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { FaStar, FaRegStar } from "react-icons/fa";
 
 function OrchidCard({ orchid, onOrchidClick }) {
   const { name, image, origin, color, rating, isSpecial, isNatural, category } =
     orchid;
+
+  const renderStars = (rating) => {
+    const stars = [];
+    const maxStars = 5;
+    
+    for (let i = 1; i <= maxStars; i++) {
+      if (i <= rating) {
+        stars.push(<FaStar key={i} style={{ color: "#ffc107" }} />);
+      } else {
+        stars.push(<FaRegStar key={i} style={{ color: "#ffc107" }} />);
+      }
+    }
+    
+    return stars;
+  };
 
   const handleClick = () => {
     if (onOrchidClick) {
@@ -26,7 +42,7 @@ function OrchidCard({ orchid, onOrchidClick }) {
           <br />
           <strong>Category:</strong> {category}
           <br />
-          <strong>Rating:</strong> {rating} ⭐️
+          <strong>Rating:</strong> {renderStars(rating)}
           <br />
           {isSpecial && <span className="badge bg-warning">Special</span>}
           {isNatural ? (
