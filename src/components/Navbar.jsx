@@ -3,7 +3,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 
 export default function AppNavbar() {
   return (
-    <Navbar expand="lg" sticky="top" className="navbar-custom">
+    <Navbar expand="lg" className="navbar-custom">
       <Container fluid className="px-0">
         <Navbar.Brand href="#">🌸 Orchids</Navbar.Brand>
         <Navbar.Toggle />
