@@ -1,6 +1,22 @@
 /* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
 
+/* CSS Variables */
+:root {
+  --primary-pink: #ffe4ec;
+  --accent-green: #5a9e6f;
+}
+
+/* Navbar Styles */
+.navbar-custom {
+  background-color: var(--primary-pink);
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: var(--accent-green) !important;
+  font-weight: 500;
+}
+
 /* Global styles */
 * {
   box-sizing: border-box;
@@ -27,7 +43,7 @@ body {
 .App {
   min-height: 100vh;
   background: linear-gradient(135deg, #ffe4ec 0%, #e6f4ea 100%);
-  padding: 3rem;
+  padding: 0 3rem 3rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +56,7 @@ body {
   font-weight: 600;
   color: #5a9e6f;
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 2rem 0 2rem 0;
   font-size: 2.5rem;
 }
 
