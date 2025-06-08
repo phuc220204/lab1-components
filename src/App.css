@@ -9,10 +9,13 @@
 
 /* Navbar Styles */
 .navbar-custom {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0 2rem;
   background: linear-gradient(90deg, #ffd1e6 0%, #d4f7dc 100%);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  height: 60px;
-  padding: 0 2rem;
+  z-index: 999;
 }
 .navbar-custom .navbar-brand,
 .navbar-custom .nav-link {
