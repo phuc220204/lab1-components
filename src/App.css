@@ -3,44 +3,53 @@
 
 /* CSS Variables */
 :root {
-  --primary-pink: #ffe4ec;
-  --accent-green: #5a9e6f;
+  --primary-base: #2f5d50;    /* xanh lá rêu */
+  --primary-light: #a3d9c4;   /* xanh lá nhạt */
+  --accent-flower: #f28ab2;   /* hồng hoa đào */
+  --text-primary: #2c2c2c;    /* xám đậm */
+  --bg-page: #fcfcfa;         /* nền sáng tự nhiên */
+  --bg-card: #ffffff;         /* nền trắng cho card */
 }
 
 /* Navbar Styles */
 .navbar-custom {
-  background: #e6f4ea;
+  background: var(--primary-base);
   width: 100%;
   padding: 0.5rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 .navbar-custom .navbar-brand {
   font-weight: 600;
-  color: #5a9e6f !important;
+  color: var(--accent-flower) !important;
 }
 .navbar-custom .nav-link {
-  color: #5a9e6f !important;
+  color: #fafafa !important;
   margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+.navbar-custom .nav-link:hover {
+  color: var(--accent-flower) !important;
 }
 .navbar-custom .navbar-toggler {
-  border-color: var(--accent-green);
+  border-color: #fafafa;
 }
 .navbar-custom .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%235a9e6f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23fafafa' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Gallery Header Styles */
 .gallery-header {
   width: 100%;
-  background-color: rgba(255, 228, 236, 0.5);
+  background: var(--primary-light);
+  padding: 1.5rem 0;
   text-align: center;
-  padding: 2rem 0;
-  margin-bottom: 2rem;
   border-radius: 8px;
+  margin-bottom: 2rem;
 }
 .gallery-header h1 {
-  color: var(--accent-green);
-  font-size: 2.5rem;
   margin: 0;
+  color: var(--primary-base);
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -54,40 +63,21 @@ body,
 #root {
   width: 100%;
   margin: 0;
+  padding: 0;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: 'Nunito', sans-serif;
 }
 
-body {
-  font-family: "Nunito", sans-serif;
-  margin: 0;
-  padding: 0;
+.App {
+  padding: 2rem 1rem;
 }
 
 #root {
   min-height: 100vh;
 }
 
-/* Main App Container */
-.App {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #ffe4ec 0%, #e6f4ea 100%);
-  padding: 0 3rem 3rem 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-/* Typography */
-.App h1 {
-  font-weight: 600;
-  color: #5a9e6f;
-  text-align: center;
-  margin: 2rem 0 2rem 0;
-  font-size: 2.5rem;
-}
-
-/* Container adjustments */
+/* Orchid Card Styles */
 .orchids-container {
   max-width: 1200px; /* giới hạn chiều rộng */
   width: 100%;
@@ -132,6 +122,59 @@ body {
   .grid-container {
     grid-template-columns: 1fr;
   }
+}
+
+/* Orchid Card Styles */
+.orchid-card {
+  background: var(--bg-card);
+  border: 1px solid var(--primary-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.orchid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.orchid-card .card-title {
+  color: var(--primary-base);
+  font-weight: 600;
+}
+
+.orchid-card .card-text {
+  color: var(--text-primary);
+}
+
+/* Badge Styles */
+.orchid-card .badge-special,
+.orchid-card .badge.bg-warning {
+  background: var(--accent-flower) !important;
+  color: #fff !important;
+}
+
+.orchid-card .badge-natural,
+.orchid-card .badge.bg-success {
+  background: var(--primary-base) !important;
+  color: #fff !important;
+}
+
+.orchid-card .badge.bg-secondary {
+  background: #6c757d !important;
+  color: #fff !important;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: var(--primary-base);
+  border-color: var(--primary-base);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-flower);
+  border-color: var(--accent-flower);
 }
 
 /* Custom styles for Orchid components */

@@ -9,7 +9,7 @@ function OrchidCard({ orchid, onOrchidClick }) {
   const renderStars = (rating) => {
     const stars = [];
     const maxStars = 5;
-    
+
     for (let i = 1; i <= maxStars; i++) {
       if (i <= rating) {
         stars.push(<FaStar key={i} style={{ color: "#ffc107" }} />);
@@ -17,7 +17,7 @@ function OrchidCard({ orchid, onOrchidClick }) {
         stars.push(<FaRegStar key={i} style={{ color: "#ffc107" }} />);
       }
     }
-    
+
     return stars;
   };
 
