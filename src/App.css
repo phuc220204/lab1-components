@@ -10,11 +10,26 @@
 /* Navbar Styles */
 .navbar-custom {
   background-color: var(--primary-pink);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .navbar-custom .navbar-brand,
 .navbar-custom .nav-link {
   color: var(--accent-green) !important;
   font-weight: 500;
+}
+.navbar-custom .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.navbar-custom .nav-link:hover {
+  color: #4a8c5f !important;
+  text-decoration: none;
+}
+.navbar-custom .navbar-toggler {
+  border-color: var(--accent-green);
+}
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%235a9e6f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Global styles */
@@ -259,7 +274,7 @@ body {
 /* Enhanced mobile experience */
 @media (max-width: 576px) {
   .App {
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
   }
 
   .orchids-container {
@@ -268,7 +283,17 @@ body {
 
   .App h1 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  /* Navbar mobile styles */
+  .navbar-custom .navbar-brand {
+    font-size: 1.3rem;
+  }
+  
+  .navbar-custom .nav-link {
+    padding: 0.75rem 1rem;
+    text-align: center;
   }
 
   .row {
