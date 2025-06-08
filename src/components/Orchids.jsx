@@ -16,7 +16,8 @@ function Orchids() {
   // Hàm đóng modal
   const handleCloseModal = () => {
     setSelectedOrchid(null);
-  };  return (
+  };
+  return (
     <Container fluid className="orchids-container">
       <div className="grid-container">
         {orchids.map((o) => (

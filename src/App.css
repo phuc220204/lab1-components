@@ -9,21 +9,41 @@
 
 /* Navbar Styles */
 .navbar-custom {
-  background-color: var(--primary-pink);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: linear-gradient(90deg, #ffd1e6 0%, #d4f7dc 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: 60px;
+  padding: 0 2rem;
 }
 .navbar-custom .navbar-brand,
 .navbar-custom .nav-link {
-  color: var(--accent-green) !important;
+  color: #3a7d44 !important;
   font-weight: 500;
 }
 .navbar-custom .navbar-brand {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: #3a7d44 !important;
 }
-.navbar-custom .nav-link:hover {
-  color: #4a8c5f !important;
-  text-decoration: none;
+.navbar-custom .nav-link {
+  color: #3a7d44 !important;
+  margin: 0 1rem;
+  font-weight: 500;
+  position: relative;
+}
+.navbar-custom .nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #3a7d44;
+  transition: width .3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+.navbar-custom .nav-link:hover::after,
+.navbar-custom .nav-link.active::after {
+  width: 100%;
 }
 .navbar-custom .navbar-toggler {
   border-color: var(--accent-green);
@@ -77,9 +97,9 @@ body {
 
 /* Container adjustments */
 .orchids-container {
-  max-width: 1200px;      /* giới hạn chiều rộng */
+  max-width: 1200px; /* giới hạn chiều rộng */
   width: 100%;
-  margin: 0 auto;         /* căn giữa */
+  margin: 0 auto; /* căn giữa */
   padding: 2rem 1rem;
 }
 
@@ -105,20 +125,20 @@ body {
 
 /* Responsive breakpoints */
 @media (max-width: 1200px) {
-  .grid-container { 
-    grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+  .grid-container {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
   }
 }
 
 @media (max-width: 992px) {
-  .grid-container { 
-    grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
 }
 
 @media (max-width: 576px) {
-  .grid-container { 
-    grid-template-columns: 1fr; 
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -290,7 +310,7 @@ body {
   .navbar-custom .navbar-brand {
     font-size: 1.3rem;
   }
-  
+
   .navbar-custom .nav-link {
     padding: 0.75rem 1rem;
     text-align: center;
@@ -356,12 +376,12 @@ body {
   .orchids-container {
     max-width: 1400px;
   }
-  
+
   .App h1 {
     font-size: 3rem;
     margin-bottom: 3rem;
   }
-  
+
   /* Extra large screens: 4-5 cards per row */
   .orchid-col {
     flex: 0 0 20%;
@@ -374,7 +394,7 @@ body {
   .orchids-container {
     max-width: 1600px;
   }
-  
+
   /* Ultra-wide: 5-6 cards per row */
   .orchid-col {
     flex: 0 0 16.666%;

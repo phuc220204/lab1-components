@@ -1,9 +1,9 @@
-import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React from "react";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
 export default function AppNavbar() {
   return (
-    <Navbar expand="lg" className="navbar-custom" variant="light">
+    <Navbar expand="lg" sticky="top" className="navbar-custom" variant="light">
       <Container>
         <Navbar.Brand href="#">Orchids</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
