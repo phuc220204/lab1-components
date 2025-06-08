@@ -1,135 +1,156 @@
-/* Import Google Font */
+/* Import Google Font để sử dụng font Nunito cho toàn bộ website */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
 
-/* CSS Variables */
+/* CSS Variables - định nghĩa các màu sắc chính của website */
+/* Sử dụng CSS Variables giúp dễ dàng thay đổi theme màu sau này */
 :root {
-  --primary-base: #2f5d50; /* xanh lá rêu */
-  --primary-light: #a3d9c4; /* xanh lá nhạt */
-  --accent-flower: #f28ab2; /* hồng hoa đào */
-  --text-primary: #2c2c2c; /* xám đậm */
-  --bg-page: #fcfcfa; /* nền sáng tự nhiên */
-  --bg-card: #ffffff; /* nền trắng cho card */
+  --primary-base: #2f5d50; /* màu xanh lá rêu chính */
+  --primary-light: #a3d9c4; /* màu xanh lá nhạt cho background */
+  --accent-flower: #f28ab2; /* màu hồng hoa đào để làm điểm nhấn */
+  --text-primary: #2c2c2c; /* màu xám đậm cho text chính */
+  --bg-page: #fcfcfa; /* màu nền sáng tự nhiên cho toàn trang */
+  --bg-card: #ffffff; /* màu nền trắng cho các card */
 }
 
-/* Navbar Styles */
+/* Navbar Styles - Styling cho component AppNavbar */
 .navbar-custom {
   position: relative;
   width: 100%;
-  height: 80px;
-  padding: 0 2rem;
+  height: 80px; /* Chiều cao cố định cho navbar */
+  padding: 0 2rem; /* Padding trái phải */
+  /* Gradient background từ hồng sang xanh lá */
   background: linear-gradient(90deg, #ffd1e6 0%, #d4f7dc 100%);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
   display: flex;
   align-items: center;
 }
+
+/* Styling cho brand/logo trong navbar */
 .navbar-custom .navbar-brand {
   font-weight: 600;
-  color: var(--primary-base) !important;
+  color: var(--primary-base) !important; /* Sử dụng CSS variable */
   display: flex;
   align-items: center;
   height: 100%;
 }
+
+/* Styling cho các nav links */
 .navbar-custom .nav-link {
   color: var(--primary-base) !important;
-  margin-left: 1rem;
-  transition: color 0.3s ease;
+  margin-left: 1rem; /* Khoảng cách giữa các link */
+  transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
   text-decoration: none;
 }
+
+/* Hover effect cho nav links */
 .navbar-custom .nav-link:hover {
-  color: var(--accent-flower) !important;
-  text-decoration: underline;
+  color: var(--accent-flower) !important; /* Đổi màu khi hover */
+  text-decoration: underline; /* Thêm gạch chân khi hover */
 }
+
+/* Styling cho nút toggle menu trên mobile */
 .navbar-custom .navbar-toggler {
   border-color: var(--primary-base);
 }
+
+/* Custom icon cho nút toggle */
 .navbar-custom .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%232f5d50' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Responsive Navbar */
+/* Responsive Navbar - Điều chỉnh navbar cho màn hình nhỏ */
+/* Breakpoint cho tablet (dưới 991.98px) */
 @media (max-width: 991.98px) {
   .navbar-custom {
-    height: auto;
-    min-height: 80px;
+    height: auto; /* Cho phép chiều cao tự động */
+    min-height: 80px; /* Chiều cao tối thiểu */
     padding: 1rem 2rem;
   }
 
   .navbar-custom .navbar-collapse {
-    margin-top: 1rem;
+    margin-top: 1rem; /* Khoảng cách cho menu dropdown */
   }
 
   .navbar-custom .nav-link {
-    margin-left: 0;
-    margin-top: 0.5rem;
+    margin-left: 0; /* Bỏ margin trái trên mobile */
+    margin-top: 0.5rem; /* Thêm margin trên cho mỗi link */
   }
 }
 
+/* Breakpoint cho mobile (dưới 576px) */
 @media (max-width: 576px) {
   .navbar-custom {
-    padding: 1rem;
+    padding: 1rem; /* Giảm padding trên mobile */
   }
 }
 
-/* Gallery Header Styles */
+/* Gallery Header Styles - Styling cho component GalleryHeader */
 .gallery-header {
   width: 100%;
-  text-align: center;
-  margin: 0 auto 2rem;
-  padding: 2rem 0;
-  background: var(--primary-light);
-  border-radius: 8px;
+  text-align: center; /* Căn giữa text */
+  margin: 0 auto 2rem; /* Margin dưới 2rem */
+  padding: 2rem 0; /* Padding trên dưới */
+  background: var(--primary-light); /* Nền xanh lá nhạt */
+  border-radius: 8px; /* Bo góc nhẹ */
 }
+
+/* Styling cho tiêu đề h1 trong gallery header */
 .gallery-header h1 {
-  margin: 0;
-  color: var(--primary-base);
-  font-size: 2.5rem;
-  font-weight: 700;
+  margin: 0; /* Bỏ margin mặc định */
+  color: var(--primary-base); /* Màu xanh lá đậm */
+  font-size: 2.5rem; /* Kích thước font lớn */
+  font-weight: 700; /* Font weight bold */
 }
 
-/* Global styles */
+/* Global styles - Styling cơ bản cho toàn bộ website */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Tính toán size bao gồm cả padding và border */
 }
 
+/* Reset CSS cho html, body và root div */
 html,
 body,
 #root {
   width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg-page);
-  color: var(--text-primary);
-  font-family: "Nunito", sans-serif;
+  margin: 0; /* Bỏ margin mặc định */
+  padding: 0; /* Bỏ padding mặc định */
+  background-color: var(--bg-page); /* Nền trang */
+  color: var(--text-primary); /* Màu text chính */
+  font-family: "Nunito", sans-serif; /* Font chính của website */
 }
 
+/* Styling cho component App chính */
 .App {
   padding: 0;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto; /* Căn giữa */
 }
 
+/* Đảm bảo trang có chiều cao tối thiểu full viewport */
 #root {
   min-height: 100vh;
 }
 
-/* Orchid Card Styles */
+/* Orchid Container Styles - Styling cho container chứa danh sách hoa lan */
 .orchids-container {
-  max-width: 1200px; /* giới hạn chiều rộng */
+  max-width: 1200px; /* Giới hạn chiều rộng tối đa */
   width: 100%;
-  margin: 0 auto; /* căn giữa */
-  padding: 2rem 1rem;
+  margin: 0 auto; /* Căn giữa container */
+  padding: 2rem 1rem; /* Padding xung quanh */
 }
 
+/* Override Bootstrap container-fluid */
 .container-fluid {
   max-width: 100%;
   padding-left: 0;
   padding-right: 0;
 }
 
+/* Container với animation fade in */
 .container {
   max-width: 1200px;
   width: 100%;
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeInUp 0.8s ease-out; /* Hiệu ứng fade in khi load */
 }
 
 /* CSS Grid for gallery */
