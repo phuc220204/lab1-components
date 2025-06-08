@@ -1,3 +1,5 @@
+// Import React library để tạo components
+import React from "react";
 // Import các components con để lắp ráp thành ứng dụng hoàn chỉnh
 import AppNavbar from "./components/Navbar"; // Component thanh điều hướng
 import GalleryHeader from "./components/GalleryHeader"; // Component tiêu đề gallery

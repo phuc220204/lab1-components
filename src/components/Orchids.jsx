@@ -1,5 +1,5 @@
-// Import hook useState để quản lý state
-import { useState } from "react";
+// Import React và hook useState để quản lý state
+import React, { useState } from "react";
 // Import Container từ React Bootstrap cho layout
 import { Container } from "react-bootstrap";
 // Import dữ liệu danh sách hoa lan từ file data
