@@ -1,0 +1,384 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Main App Container */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe4ec 0%, #e6f4ea 100%);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* Typography */
+.App h1 {
+  font-weight: 600;
+  color: #5a9e6f;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+/* Container adjustments */
+.orchids-container {
+  max-width: 1200px;      /* giới hạn chiều rộng */
+  width: 100%;
+  margin: 0 auto;         /* căn giữa */
+  padding: 2rem 1rem;
+}
+
+.container-fluid {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* CSS Grid for gallery */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .grid-container { 
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-container { 
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-container { 
+    grid-template-columns: 1fr; 
+  }
+}
+
+/* Custom styles for Orchid components */
+.orchid-card {
+  border-radius: 16px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05) !important;
+  border: 2px solid transparent !important;
+  transition: all 0.3s ease-in-out;
+  margin: 0 !important;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out;
+  width: 100%;
+  max-width: 320px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.orchid-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.orchid-card:hover {
+  transform: scale(1.05);
+  border-color: #5a9e6f !important;
+  box-shadow: 0 8px 16px rgba(90, 158, 111, 0.2) !important;
+}
+
+/* Stagger animation for cards */
+.orchid-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.orchid-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.orchid-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.orchid-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Modal responsive styles */
+.modal-body .img-fluid {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.modal-body .img-fluid:hover {
+  transform: scale(1.02);
+}
+
+/* Badge styling improvements */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+}
+
+/* Card styling override */
+.card {
+  border: none !important;
+  transition: all 0.3s ease;
+}
+
+/* Enhanced Modal Styling */
+.modal-content {
+  border-radius: 16px !important;
+  border: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid #e6f4ea !important;
+  background: linear-gradient(90deg, #ffe4ec 0%, #e6f4ea 100%);
+  border-radius: 16px 16px 0 0 !important;
+}
+
+.modal-title {
+  color: #5a9e6f !important;
+  font-weight: 600 !important;
+}
+
+.modal-footer {
+  border-top: 1px solid #e6f4ea !important;
+  background: #f8f9fa;
+  border-radius: 0 0 16px 16px !important;
+}
+
+/* Enhanced Button Styling */
+.btn-secondary {
+  background: linear-gradient(135deg, #5a9e6f 0%, #4a8a5e 100%) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 1.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #4a8a5e 0%, #3a7a4e 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(90, 158, 111, 0.3) !important;
+}
+
+/* Loading animation for images */
+.card-img-top {
+  transition: opacity 0.3s ease;
+  background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+    linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+    linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Improved text styling */
+.card-title {
+  color: #5a9e6f !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+}
+
+.card-text {
+  color: #666 !important;
+  line-height: 1.5 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-lg {
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-body .row {
+    margin: 0;
+  }
+
+  .modal-body .col-md-6 {
+    padding: 0.5rem;
+  }
+}
+
+/* Enhanced mobile experience */
+@media (max-width: 576px) {
+  .App {
+    padding: 1rem;
+  }
+
+  .orchids-container {
+    padding: 1rem;
+  }
+
+  .App h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .row {
+    gap: 1rem;
+  }
+
+  /* Mobile: 1 card per row */
+  .orchid-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .orchid-card {
+    max-width: 100%;
+    width: 100% !important;
+    height: 350px;
+  }
+
+  /* Hide hover overlay on mobile */
+  .orchid-card::before {
+    display: none;
+  }
+
+  /* Better touch targets */
+  .orchid-card {
+    min-height: 280px;
+  }
+
+  .modal-dialog {
+    margin: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) and (min-width: 577px) {
+  .App {
+    padding: 2rem;
+  }
+
+  .orchids-container {
+    padding: 1.5rem;
+  }
+
+  .App h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Tablet: 2 cards per row */
+  .orchid-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Large desktop screens */
+@media (min-width: 1400px) {
+  .orchids-container {
+    max-width: 1400px;
+  }
+  
+  .App h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Extra large screens: 4-5 cards per row */
+  .orchid-col {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1800px) {
+  .orchids-container {
+    max-width: 1600px;
+  }
+  
+  /* Ultra-wide: 5-6 cards per row */
+  .orchid-col {
+    flex: 0 0 16.666%;
+    max-width: 16.666%;
+  }
+}
+
+/* Gallery fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header animation */
+.App h1 {
+  animation: fadeInUp 0.6s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+/* Hover effect for better interaction feedback */
+.orchid-card::before {
+  content: "👁️ Xem chi tiết";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(90, 158, 111, 0.9);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.orchid-card:hover::before {
+  opacity: 1;
+}

@@ -1,0 +1,18 @@
+export const orchids = [
+  { id: '1', name: 'Taichung beauty', rating: 5, isSpecial: true, isNatural: false, image: 'https://via.placeholder.com/300x200.png?text=Taichung+beauty', color: 'pink', numberOfLike: 192, origin: 'Taiwan', category: 'Cattleya' },
+  { id: '2', name: 'Black Beauty', rating: 4, isSpecial: false, isNatural: true, image: 'https://via.placeholder.com/300x200.png?text=Black+Beauty', color: 'purple', numberOfLike: 85, origin: 'Mexico', category: 'Catasetum' },
+  { id: '3', name: 'Golden Sunset', rating: 4, isSpecial: true, isNatural: false, image: 'https://via.placeholder.com/300x200.png?text=Golden+Sunset', color: 'yellow', numberOfLike: 156, origin: 'Thailand', category: 'Dendrobium' },
+  { id: '4', name: 'White Angel', rating: 5, isSpecial: false, isNatural: true, image: 'https://via.placeholder.com/300x200.png?text=White+Angel', color: 'white', numberOfLike: 203, origin: 'Philippines', category: 'Phalaenopsis' },
+  { id: '5', name: 'Red Dragon', rating: 3, isSpecial: true, isNatural: false, image: 'https://via.placeholder.com/300x200.png?text=Red+Dragon', color: 'red', numberOfLike: 98, origin: 'Vietnam', category: 'Cattleya' },
+  { id: '6', name: 'Blue Moon', rating: 4, isSpecial: false, isNatural: true, image: 'https://via.placeholder.com/300x200.png?text=Blue+Moon', color: 'blue', numberOfLike: 134, origin: 'Indonesia', category: 'Vanda' },
+  { id: '7', name: 'Purple Rain', rating: 5, isSpecial: true, isNatural: false, image: 'https://via.placeholder.com/300x200.png?text=Purple+Rain', color: 'purple', numberOfLike: 178, origin: 'Malaysia', category: 'Oncidium' },
+  { id: '8', name: 'Green Paradise', rating: 3, isSpecial: false, isNatural: true, image: 'https://via.placeholder.com/300x200.png?text=Green+Paradise', color: 'green', numberOfLike: 87, origin: 'Brazil', category: 'Cattleya' },
+  { id: '9', name: 'Pink Lady', rating: 4, isSpecial: true, isNatural: false, image: 'https://via.placeholder.com/300x200.png?text=Pink+Lady', color: 'pink', numberOfLike: 165, origin: 'Colombia', category: 'Phalaenopsis' },
+  { id: '10', name: 'Orange Flame', rating: 5, isSpecial: false, isNatural: true, image: 'https://via.placeholder.com/300x200.png?text=Orange+Flame', color: 'orange', numberOfLike: 189, origin: 'Ecuador', category: 'Dendrobium' },
+  { id: '11', name: 'Silver Star', rating: 4, isSpecial: true, isNatural: false, image: 'https://via.placeholder.com/300x200.png?text=Silver+Star', color: 'silver', numberOfLike: 142, origin: 'India', category: 'Vanda' },
+  { id: '12', name: 'Coral Dream', rating: 3, isSpecial: false, isNatural: true, image: 'https://via.placeholder.com/300x200.png?text=Coral+Dream', color: 'coral', numberOfLike: 76, origin: 'Australia', category: 'Cymbidium' },
+  { id: '13', name: 'Lavender Mist', rating: 5, isSpecial: true, isNatural: false, image: 'https://via.placeholder.com/300x200.png?text=Lavender+Mist', color: 'lavender', numberOfLike: 198, origin: 'New Zealand', category: 'Oncidium' },
+  { id: '14', name: 'Crimson Glory', rating: 4, isSpecial: false, isNatural: true, image: 'https://via.placeholder.com/300x200.png?text=Crimson+Glory', color: 'crimson', numberOfLike: 123, origin: 'Costa Rica', category: 'Cattleya' },
+  { id: '15', name: 'Golden Crown', rating: 3, isSpecial: true, isNatural: false, image: 'https://via.placeholder.com/300x200.png?text=Golden+Crown', color: 'gold', numberOfLike: 91, origin: 'Panama', category: 'Epidendrum' },
+  { id: '16', name: 'Mystic Moon', rating: 5, isSpecial: true, isNatural: true, image: 'https://via.placeholder.com/300x200.png?text=Mystic+Moon', color: 'blue', numberOfLike: 210, origin: 'Nepal', category: 'Phalaenopsis' }
+];
