@@ -17,15 +17,10 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   z-index: 999;
 }
-.navbar-custom .navbar-brand,
-.navbar-custom .nav-link {
-  color: #3a7d44 !important;
-  font-weight: 500;
-}
 .navbar-custom .navbar-brand {
+  color: #3a7d44 !important;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #3a7d44 !important;
 }
 .navbar-custom .nav-link {
   color: #3a7d44 !important;
@@ -35,14 +30,13 @@
 }
 .navbar-custom .nav-link::after {
   content: '';
-  display: block;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
   width: 0;
   height: 2px;
   background: #3a7d44;
   transition: width .3s;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
 }
 .navbar-custom .nav-link:hover::after,
 .navbar-custom .nav-link.active::after {
